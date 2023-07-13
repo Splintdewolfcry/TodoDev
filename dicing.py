@@ -48,20 +48,6 @@ while True:
             with open('todos.txt', 'r') as file:
                 todos = file.readlines()
             
-                
-            
-            
-            
-            
-            
-            # for index, item in enumerate(todos):
-            #     row = f'[{index + 1}] - {item}'
-            #     print(row)
-            #     for todo in todos:
-            #         number = int(input('Number of the todo to edit: '))
-            #         number = number - 1
-            #         new_todo = input('Input new todo')
-            #         todos[number] = new_todo
         case 'complete':
             number = int(input('Which one did you complete?  '))
             todos.pop(number)

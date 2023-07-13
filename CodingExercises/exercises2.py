@@ -22,9 +22,14 @@
 
 # Path('/root/dir/sub/file.ext').stem
 
-file = open("a.txt", 'w')
+# file = open("a.txt", 'w')
 
-file.write("100.12 \n")
-file.write("111.23 \n")
+# file.write("100.12 \n")
+# file.write("111.23 \n")
 
-file.close()        
+# file.close()        
+
+with open("D:/AUIVVII/Udemy/PratikPython/CodingExercises/NotNeededRN/file.txt", 'r') as file:
+    content = file.read()
+    # print(content+ '\n' + len(content))
+    print(f'{content}\n{len(content)}')

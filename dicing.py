@@ -1,57 +1,60 @@
 todos = ['Throw trash away', 'Fix ur bikes', 'Git bi kahve al']
 
 while True:
-    user_action = input('Type: add, show, edit or exit  ').strip()
+    user_action = input('Type: add, show, edit or exit ').strip()
 
-    match user_action:
-        case 'add':
-            todo = input('Enter a to-do: ') + '\n'
+    if 'add' in user_action[:4]:
+        # The command goes like: add so slice until you reach add and a space
+        todo = user_action[4:]
+        todos.append(todo)
 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
-            
-            todos.append(todo)
+        # Open and read todos.txt
 
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+        # Append the todo to that txt
 
-        case 'show':
+        # Now write the todos txt you created locally to the txt file
 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
 
-            for index, item in enumerate(todos):
-                item.strip('\n')
-                row = f'[{index + 1}] - {item}'
-                print(row)
+    elif 'show' in user_action:
+        # Read todos txt
 
-        case 'edit':
-            #show the items
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
-                print('Here is the existing todos', todos)
+        for index, item in enumerate(todos):
+            # item = item.strip('\n')
+            row = f'[{index + 1 }] -- {item}'
+            print(row)
 
-            for index, item in enumerate(todos):
-                item.strip('\n')
-                row = f'[{index + 1}] - {item}'
-                print(row)
-            
-            #Ask which one you would like to edit
-            user_edit_number = int(input('Number of the todo to edit: '))
-            user_edit_number = user_edit_number - 1
-            
-            #Ask user for the changed input
-            overriden_todo = input('Input new todo: ')
+    elif 'edit' in user_action:
+        # The command goes like: edit 2, so slice until you reach 2
 
-            todos[user_edit_number] = overriden_todo
+        # Adjust their number to the python indexing
 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
-            
-        case 'complete':
-            number = int(input('Which one did you complete?  '))
-            todos.pop(number)
-        case 'exit':
-            break
-        case _:
-            print('Not understood') 
+        #Read todos.txt
+
+        #Ask for the new todo
+        #Override the old with the new todo
+
+        #Write the new todo to the todo.txt
+
+    
+        #Slice until complete and a space
+
+        # Read todos txt
+
+        # Adjust 'index' to the program
+
+        # Strip the backslash
+
+        # Remove that index
+
+        # Write the edited todos to todos.txt
+
+        #Notify the user
+        message = f'Todo {todo_to_remove} was removed from the list'
+        print(message)
+
+    elif 'exit' in user_action:
+        break
+    else:
+        print('Not understood') 
+
+print('Bye')

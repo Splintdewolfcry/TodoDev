@@ -1,30 +1,40 @@
-todos = ['Throw trash away', 'Fix ur bikes', 'Git bi kahve al']
+# todos = ['Throw trash away', 'Fix ur bikes', 'Git bi kahve al']
+todos = []
 
 while True:
     user_action = input('Type: add, show, edit or exit ').strip()
 
     if 'add' in user_action[:4]:
         # The command goes like: add so slice until you reach add and a space
-        todo = user_action[4:]
+        todo = user_action[4:] + '\n'
         todos.append(todo)
 
         # Open and read todos.txt
+        with open('todos.txt', 'r') as f:
+            todos = f.readlines()
 
         # Append the todo to that txt
+        todos.append(todo)
 
         # Now write the todos txt you created locally to the txt file
-
+        with open('todos.txt', 'w') as f:
+            # todos.strip('\n')
+            content = f.writelines(todos)
 
     elif 'show' in user_action:
         # Read todos txt
+        with open('todos.txt', 'r') as f:
+            todos = file.readlines()
 
         for index, item in enumerate(todos):
-            # item = item.strip('\n')
+            item = item.strip('\n')
             row = f'[{index + 1 }] -- {item}'
+            row.strip('\n')
             print(row)
 
     elif 'edit' in user_action:
         # The command goes like: edit 2, so slice until you reach 2
+        
 
         # Adjust their number to the python indexing
 

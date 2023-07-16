@@ -29,7 +29,16 @@
 
 # file.close()        
 
-with open("D:/AUIVVII/Udemy/PratikPython/CodingExercises/NotNeededRN/file.txt", 'r') as file:
-    content = file.read()
-    # print(content+ '\n' + len(content))
-    print(f'{content}\n{len(content)}')
+# with open("D:/AUIVVII/Udemy/PratikPython/CodingExercises/NotNeededRN/file.txt", 'r') as file:
+#     content = file.read()
+#     # print(content+ '\n' + len(content))
+#     print(f'{content}\n{len(content)}')
+
+ids = ["XF345_89", "XER76849", "XA454_55"]
+    
+x = 0
+    
+for id in ids:
+    if '_' in id:
+        x = x + 1
+print(x)

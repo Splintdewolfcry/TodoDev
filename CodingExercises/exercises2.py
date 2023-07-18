@@ -34,11 +34,28 @@
 #     # print(content+ '\n' + len(content))
 #     print(f'{content}\n{len(content)}')
 
-ids = ["XF345_89", "XER76849", "XA454_55"]
+# ids = ["XF345_89", "XER76849", "XA454_55"]
     
-x = 0
+# x = 0
     
-for id in ids:
-    if '_' in id:
-        x = x + 1
-print(x)
+# for id in ids:
+#     if '_' in id:
+#         x = x + 1
+# print(x)
+
+# try:
+#     waiting_list = ["john", "marry"]
+#     name = input("Enter name: ")
+        
+#     number = waiting_list.index(name)
+#     print(f"{name}'s turn is {number}")
+# except ValueError:
+#     print(f'{name} is not in the list')
+
+def get_average():
+    x = "hello"
+    return x.capitalize()
+    
+average = get_average()
+
+print(average)

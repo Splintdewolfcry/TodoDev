@@ -52,10 +52,10 @@
 # except ValueError:
 #     print(f'{name} is not in the list')
 
-def get_average():
-    x = "hello"
-    return x.capitalize()
+def calculate_time(h, g=9.80665):
+    t = (2 * h / g) ** 0.5
+    return t
     
-average = get_average()
-
-print(average)
+    
+time = calculate_time(100)
+print(time)

@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "../../SomeReps/solid-pancake"
+		},
+		{
+			"path": "../Watson-master"
+		},
+		{
+			"path": "../IntroToClasses"
 		}
 	],
 	"settings": {}

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "todogui"
+version = "0.1.0"
+description = "GUI version of the first of the \"Learn Python in 60 days with 20 Projects\""
+authors = ["Splintdewolfcry <spymaccry@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+PySimpleGUI = "^4.60.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
